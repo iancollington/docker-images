@@ -5,7 +5,7 @@ Oracle Express Edition 11g Release 2 on Ubuntu 14.04.1 LTS
 
 This **Dockerfile** is based on [wnameless/oracle-xe-11g](https://registry.hub.docker.com/u/wnameless/oracle-xe-11g/). It adds functionality to allow SQL scripts to be executed when creating a new container to create a database.
 
-More information on how to use this image can be found in the blog post: http://www.iancollington.com/customising-oracle-on-docker/
+More information on how to use this image can be found in the blog post: http://www.iancollington.com/managing-oracle-schema-versions-docker/
 
 ### Installation
 ```

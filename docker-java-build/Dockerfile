@@ -15,4 +15,15 @@ RUN curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binar
 
 ENV MAVEN_HOME /usr/share/maven
 
+# Create a nonroot user, and switch to it
+RUN /usr/sbin/useradd --create-home --home-dir /usr/local/nonroot --shell /bin/bash nonroot
+RUN /usr/sbin/adduser nonroot sudo
+RUN chown -R nonroot /usr/local/
+RUN chown -R nonroot /usr/lib/
+RUN chown -R nonroot /usr/share/
+RUN chown -R nonroot /usr/bin/
+RUN chown -R nonroot /src
+
+USER nonroot
+
 CMD ["bash"]
